@@ -60,6 +60,7 @@ const SignUp = () => {
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   return (
+    <Provider>
     <Container component="main" maxWidth="xs">
       <Paper className={classes.paper} elevation={3}>
         <Avatar className={classes.avatar}>
@@ -102,6 +103,7 @@ const SignUp = () => {
         </form>
       </Paper>
     </Container>
+    </Provider>
     
   );
 };

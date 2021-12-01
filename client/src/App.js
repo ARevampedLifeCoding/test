@@ -4,7 +4,7 @@ import Navbar from './components/Navbar/Navbar'
 import Menu from './components/Menu/Menu'
 import Adopt from './components/Adopt/Adopt';
 import Login from './components/Auth/Auth'
-import Signup from "./components/Signup/Signup";
+
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,7 +16,7 @@ function App() {
     <div className="sections">
       <Adopt />
       <Login />
-      <Signup />
+      
     </div>
 </div>
   );
