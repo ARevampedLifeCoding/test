@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 
 import Adopt from "./components/Adopt/Adopt";
 import Auth from "./components/Auth/Auth";
-import Nav from "./components/Nav/Nav"
+import Nav from "./components/Nav/Nav";
 
 const App = () => {
   <Provider>
