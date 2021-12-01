@@ -10,7 +10,7 @@ const resolvers = {
     user: async (parent, { username }) => {
       return User.findOne({ username }).populate('savedPets');
     },
-    savedpets: async (parent, { username }) => {
+    savedPets: async (parent, { username }) => {
       const params = username ? { username } : {};
       return User.find(params).sort({ createdAt: -1 });
     },
@@ -75,6 +75,6 @@ const resolvers = {
     },
     
   },
- };
+};
 
 module.exports = resolvers;
