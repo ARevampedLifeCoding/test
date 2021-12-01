@@ -1,13 +1,10 @@
-// import "./App.scss";
+import React from "react";
 import { Container } from "@material-ui/core";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import {  useState } from 'react';
 import { Provider } from "react-redux";
 
-// import Navbar from "./components/Navbar/Navbar";
-// import Menu from './components/Menu/Menu'
+
 import Adopt from "./components/Adopt/Adopt";
-// import Login from './components/Auth/Auth'
 import Auth from "./components/Auth/Auth";
 import Nav from "./components/Nav/Nav"
 
@@ -15,7 +12,6 @@ const App = () => {
   <Provider>
     <Router>
       <Container maxWidth="lg">
-        {/* <Navbar /> */}
         < Nav />
         <Routes>
           <Route path="/" exact component={Adopt} />
@@ -23,7 +19,7 @@ const App = () => {
         </Routes>
       </Container>
     </Router>
-  </Provider>;
+   </Provider>
 };
 
 export default App;
