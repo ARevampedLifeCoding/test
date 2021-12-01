@@ -1,25 +1,25 @@
-import './App.scss';
-import { useState } from 'react';
-import Navbar from './components/Navbar/Navbar'
-import Menu from './components/Menu/Menu'
-import Adopt from './components/Adopt/Adopt';
-import Login from './components/Auth/Auth'
+import React from "react";
+import { Container } from "@material-ui/core";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Provider } from "react-redux";
 
 
-function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  return (
-<div className="app">
-    <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-    <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-    <Menu />
-    <div className="sections">
-      <Adopt />
-      <Login />
-      
-    </div>
-</div>
-  );
-}
+import Adopt from "./components/Adopt/Adopt";
+import Auth from "./components/Auth/Auth";
+import Nav from "./components/Nav/Nav";
+
+const App = () => {
+  <Provider>
+    <Router>
+      <Container maxWidth="lg">
+        < Nav />
+        <Routes>
+          <Route path="/" exact component={Adopt} />
+          <Route path="/auth" exact component={Auth} />
+        </Routes>
+      </Container>
+    </Router>
+   </Provider>
+};
 
 export default App;

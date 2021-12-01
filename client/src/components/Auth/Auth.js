@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Provider, useDispatch } from 'react-redux';
+import {  useDispatch } from 'react-redux';
 import { Avatar, Button, Paper, Grid, Typography, Container } from '@material-ui/core';
 import { useNavigate } from 'react-router-dom';
 import { GoogleLogin } from 'react-google-login';
@@ -10,12 +9,13 @@ import Icon from './icon';
 import { signin, signup } from '../../actions/auth';
 import { AUTH } from '../../constants/actionTypes';
 import useStyles from './styles';
-import Input from './input';
+import Input from './Input';
 
 const initialState = { firstName: '', lastName: '', email: '', password: '', confirmPassword: '' };
 
 
 const SignUp = () => {
+ 
   const [form, setForm] = useState(initialState);
   const [isSignup, setIsSignup] = useState(false);
   const dispatch = useDispatch();
@@ -60,7 +60,7 @@ const SignUp = () => {
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   return (
-    <Provider>
+    
     <Container component="main" maxWidth="xs">
       <Paper className={classes.paper} elevation={3}>
         <Avatar className={classes.avatar}>
@@ -103,7 +103,7 @@ const SignUp = () => {
         </form>
       </Paper>
     </Container>
-    </Provider>
+    
     
   );
 };
