@@ -8,9 +8,10 @@ import Adopt from "./components/Adopt/Adopt";
 import Auth from "./components/Auth/Auth";
 import Nav from "./components/Nav/Nav";
 
-const App = () => {
+const App = () => (
   <Provider>
     <Router>
+      < Adopt  />
       <Container maxWidth="lg">
         < Nav />
         <Routes>
@@ -20,6 +21,6 @@ const App = () => {
       </Container>
     </Router>
    </Provider>
-};
+);
 
 export default App;
