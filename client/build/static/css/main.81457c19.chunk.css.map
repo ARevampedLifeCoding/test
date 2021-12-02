@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/components/Adopt/adopt.scss","webpack://src/index.css"],"names":[],"mappings":"AAAA,OACI,wBAA6B,CCDjC,KACI,kCACJ","file":"main.81457c19.chunk.css","sourcesContent":[".adopt {\n    background-color: darkmagenta;\n}","body {\n    background-color: rgba(0,183,255, 1) !important;\n}"]}
